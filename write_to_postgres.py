@@ -1,4 +1,3 @@
-from typing import Dict
 import psycopg2
 from utils.read_json import read
 cred_file_path = "credentials.json"
@@ -11,7 +10,6 @@ host = postgres_config['host']
 port = postgres_config['port']
 
 def write_to_postgres(data):
-		message_id = data['MessageId']
 		user_id = data['user_id'] 
 		app_version = data['app_version']   
 		device_type = data['device_type']  
